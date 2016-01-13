@@ -1,20 +1,14 @@
 # Ansible vault tools
 
-[Ansible vault][] is a wonderful tool for being able to put secrets in a version
-control system, while still protecting them. Unfortunately, these vault files
-are a pain to deal with in version control. Any change to the vault results in a
-re-encryption, which changes every character in the ciphertext.
-
-Fortunately, git has several configuration options so that we can have tools
-which can encrypt and decrypt vault files on the fly. Ansible also has some
-configuration options and features which can help us to avoid typing in our
-vault password a million times a day.
+[Ansible vault][] is a great tool for managing secrets for Ansible playbooks,
+but dealing with the vault can be a pain. This repo contains instructions and
+helper scripts to reduce that pain.
 
 ## Installation
 
 This project provides some helper scripts for dealing with ansible vault files.
 These scripts can be installed by running `make install`, which may or may not
-require root permissions to run.
+require root permissions.
 
 There is also a `make uninstall`, in case you change your mind.
 
@@ -94,7 +88,16 @@ executable script, which can use a tool with good password caching (like
 instructions on how to use it effectively.
 
 The helper `gpg-vault-password-file` can be used to create a script that can be
-used to store the vault password in a GPG encrypted file.
+used to store the vault password in a GPG encrypted file. This will create an
+executable script in the location given, and the vault password encrypted with
+the default self key.
+
+Used in this manner, `ansible-vault` will prompt for your GPG password when
+used, which will be cached for some period of time.
+
+```bash
+$ gpg-vault-password-file /path/to/vault_password_file
+```
 
 ## License
 
