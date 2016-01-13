@@ -98,11 +98,11 @@ used to store the vault password in a GPG encrypted file.
 
 ## License
 
-[ISC License](./License.md)
+[ISC License](./License)
 
  [ansible vault]: http://docs.ansible.com/ansible/playbooks_vault.html
  [binary diff]:  http://git-scm.com/docs/gitattributes#_performing_text_diffs_of_binary_files
  [spaceman-diff]: https://github.com/holman/spaceman-diff
  [vault-config]: http://docs.ansible.com/ansible/intro_configuration.html#vault-password-file
- [gpg]: http://docs.ansible.com/ansible/intro_configuration.html#vault-password-file
+ [gpg]: https://www.gnupg.org/
  [gpg-agent]: https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
