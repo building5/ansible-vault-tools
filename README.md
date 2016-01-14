@@ -81,8 +81,8 @@ Ansible's configuration files.
 vault_password_file = /path/to/vault_password_file
 ```
 
-While normally the vault file is a file that contains the plain text vault
-password (which seems like a bad idea), this password file could be an
+While normally the vault password file is a file that contains the plain text 
+vault password (which seems like a bad idea), this password file could be an
 executable script, which can use a tool with good password caching (like
 [gpg][]) to decrypt the password file. Please look up the [gpg-agent][] for
 instructions on how to use it effectively.
@@ -101,7 +101,7 @@ $ gpg-vault-password-file /path/to/vault_password_file
 
 ## License
 
-[ISC License](./License)
+[ISC License](./LICENSE)
 
  [ansible vault]: http://docs.ansible.com/ansible/playbooks_vault.html
  [binary diff]:  http://git-scm.com/docs/gitattributes#_performing_text_diffs_of_binary_files
