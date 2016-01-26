@@ -32,6 +32,7 @@ git.
 Wherever you chose to put it, the configuration is the same:
 
 ```
+# gitattributes
 vault.yml diff=ansible-vault merge=ansible-vault
 *.vault.yml diff=ansible-vault merge=ansible-vault
 ```
@@ -46,6 +47,7 @@ The configuration for the ansible-vault diff handler goes into
 `$HOME/.gitconfig`.
 
 ```ini
+# gitconfig
 [diff "ansible-vault"]
 	textconv = ansible-vault view
     # Do not cache the vault contents
@@ -61,6 +63,7 @@ conflicts, `$EDITOR` is opened allowing you to resolve the conflict before the
 merged file is re-encrypted.
 
 ```ini
+# gitconfig
 [merge "ansible-vault"]
 	name = ansible-vault merge driver
 	driver = /usr/local/bin/ansible-vault-merge -- %O %A %B %P
@@ -77,6 +80,7 @@ Ansible's configuration files.
  * `/etc/ansible/ansible.cfg` - per system configuration
 
 ```ini
+# ansible.cfg
 [defaults]
 vault_password_file = /path/to/vault_password_file
 ```
