@@ -1,7 +1,6 @@
-DESTDIR :=
-
-prefix := /usr/local
-bindir := $(prefix)/bin
+prefix = /usr/local
+exec_prefix = $(prefix)
+bindir = $(exec_prefix)/bin
 
 all:
 	@echo "Nothing to build. make install to install"

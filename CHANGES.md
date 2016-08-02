@@ -1,5 +1,15 @@
 # ansible-vault-tools changelog
 
+## v2.0.1 (2016-08-02)
+
+ * #3 - Fixup `Makefile` to better follow the [GNU Coding Standards][].
+   * [Do not set `DESTDIR` explicitly][destdir]
+   * [Use `exec_prefix` as the base path for `bindir`][bindir]
+
+ [GNU Coding Standards]: https://www.gnu.org/prep/standards/html_node/Makefile-Conventions.html
+ [destdir]: https://www.gnu.org/prep/standards/html_node/DESTDIR.html
+ [bindir]: https://www.gnu.org/prep/standards/html_node/Directory-Variables.html
+
 ## v2.0.0 (2016-06-16)
 
  * Change `gpg-vault-password-file` so that if you give it a file that already
