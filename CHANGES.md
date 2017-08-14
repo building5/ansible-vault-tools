@@ -1,5 +1,9 @@
 # ansible-vault-tools changelog
 
+## V2.0.2 (2017-08-14)
+
+ * ansible-vault-merge: Fix script when `$EDITOR` is not set. Defaults to `vi`.
+
 ## v2.0.1 (2016-08-02)
 
  * #3 - Fixup `Makefile` to better follow the [GNU Coding Standards][].

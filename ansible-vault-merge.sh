@@ -56,7 +56,7 @@ ansible-vault decrypt $OTHER > /dev/null
 
 if ! git merge-file -L CURRENT -L BASE -L OTHER $CURRENT $BASE $OTHER; then
     echo "Merge conflict; opening editor to resolve." >&2
-    $EDITOR $CURRENT
+    ${EDITOR:-vi} $CURRENT
 fi
 
 ansible-vault encrypt $CURRENT
