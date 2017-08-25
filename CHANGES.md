@@ -3,6 +3,7 @@
 ## v? (?)
 
  * Fixed tabs in README
+ * Add `git grep` section to README
 
 ## v2.0.2 (2017-08-14)
 

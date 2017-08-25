@@ -54,6 +54,16 @@ The configuration for the ansible-vault diff handler goes into
 	cachetextconv = false
 ```
 
+## git grep
+
+With the textconv settings above, this also allows you to grep into vaulted
+files. To do this, you need to pass the `--textconv` option to `git grep`.
+
+```bash
+$ git grep --textconv super_secret
+group_vars/all/vault.yml:super_secret: tell no one
+```
+
 ## git merge
 
 You can similarly configure a merge driver for use with ansible vault files. The
