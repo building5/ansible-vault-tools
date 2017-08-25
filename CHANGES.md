@@ -1,6 +1,10 @@
 # ansible-vault-tools changelog
 
-## V2.0.2 (2017-08-14)
+## v? (?)
+
+ * Fixed tabs in README
+
+## v2.0.2 (2017-08-14)
 
  * ansible-vault-merge: Fix script when `$EDITOR` is not set. Defaults to `vi`.
 

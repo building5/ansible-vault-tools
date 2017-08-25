@@ -50,7 +50,7 @@ The configuration for the ansible-vault diff handler goes into
 # gitconfig
 [diff "ansible-vault"]
 	textconv = ansible-vault view
-    # Do not cache the vault contents
+	# Do not cache the vault contents
 	cachetextconv = false
 ```
 
@@ -85,7 +85,7 @@ Ansible's configuration files.
 vault_password_file = /path/to/vault_password_file
 ```
 
-While normally the vault password file is a file that contains the plain text 
+While normally the vault password file is a file that contains the plain text
 vault password (which seems like a bad idea), this password file could be an
 executable script, which can use a tool with good password caching (like
 [gpg][]) to decrypt the password file. Please look up the [gpg-agent][] for
