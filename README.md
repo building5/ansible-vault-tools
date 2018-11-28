@@ -113,6 +113,26 @@ used, which will be cached for some period of time.
 $ gpg-vault-password-file /path/to/vault_password_file
 ```
 
+## Temporarily disabling decryption when using `git diff`, `git log`, etc.
+
+If you have setup your .gitconfig following the above instructions, git will use
+`ansible-vault view` to convert your vault files into plaintext, but this can be a
+problem if you want to see the unconverted diff between two vaultfile revisions.
+
+That is, if you temporarily want to see the diff between two encrypted
+vaultfile text blobs, perhaps to double-check that you didn't accidentally decrypt
+the file before pushing to a remote, use the [--no-textconv][] flag to turn off
+the textconv feature on a case-by-case basis:
+
+```bash
+$ git diff --no-textconv
+$ git log -p --no-textconv
+```
+
+These commands should allow you to look at the regular diffs that git
+produces, just like you hadn't used this repo at all. The next time you run the
+plain `git diff` or `git log -p`, you will see the decrypted version again.
+
 ## License
 
 [ISC License](./LICENSE)
@@ -123,3 +143,4 @@ $ gpg-vault-password-file /path/to/vault_password_file
  [vault-config]: http://docs.ansible.com/ansible/intro_configuration.html#vault-password-file
  [gpg]: https://www.gnupg.org/
  [gpg-agent]: https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
+ [--no-textconv]: https://git.wiki.kernel.org/index.php/Textconv#Blame_and_diff
